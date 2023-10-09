@@ -69,6 +69,7 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 5fr;
+
 }
 
 #stats > p {
@@ -242,15 +243,97 @@ input {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border-top: 1.5px solid var(--darkBorder);
     gap: 10px;
+
+    color: var(--text01);
 }
 
-#tileContainer div {
+#tileContainer > div {
     background-color: var(--BG02);
     border-radius: 10px;
-
+    padding: 10px;
     display: grid;
-    grid-template-rows: 5fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 1fr 1fr;
 }
+
+#TP01, #TP02, #TP03, #TP04, #TP05, #TP06 {
+    position: relative;
+    border-radius: 10px;
+    display: grid;
+    height: 3px;
+    align-items: center;
+    opacity: 50%;
+}
+
+
+#TP02 {
+    grid-template-columns: 1fr 6fr;
+}
+#TP03 {
+    grid-template-columns: 2fr 1fr;
+} 
+#TP04 {
+    grid-template-columns: 5fr 1fr;
+}
+#TP05 {
+    grid-template-columns: 1fr 99fr;
+}
+#TP06 {
+    grid-template-columns: 3fr 2fr;
+}
+
+#TP02 div:first-child,
+#TP03 div:first-child,
+#TP04 div:first-child,
+#TP05 div:first-child,
+#TP06 div:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: var(--green);
+    height: 100%;
+}
+
+#TP01 div:last-child {
+    background-color: var(--green);
+    border-radius: 10px;
+    height: 100%;
+}
+
+
+#TP02 div:last-child,
+#TP03 div:last-child,
+#TP04 div:last-child,
+#TP05 div:last-child,
+#TP06 div:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--BG01);
+    height: 100%;
+}
+
+#tile {
+    cursor: pointer;
+    transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: 200px;
+    border: none;
+}
+
+#tile:hover {
+    box-shadow: 0 0 10px black;
+    height: 300px;
+    border: 1.5px solid rgb(0, 101, 29);
+}
+
+#tileImage {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 4.5px;
+}
+
+#tileImage img {
+    height: auto;
+    width: 100%;
+}
+
 
 #completedModules {
     display: grid;
@@ -312,6 +395,41 @@ input {
     border-bottom: 1.5px solid var(--lightBorder);
     padding: 10px;
 }
+
+#actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#actions div:nth-child(1), 
+#actions div:nth-child(2), 
+#actions div:nth-child(3), 
+#actions div:nth-child(4), 
+#actions div:nth-child(5) {
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+}
+
+#actions div:nth-child(1) {
+    background-color: rgb(0, 24, 0);
+}
+#actions div:nth-child(2) {
+    background-color: rgb(5, 45, 0);
+}
+#actions div:nth-child(3) {
+    background-color: rgb(0, 71, 2);
+}
+#actions div:nth-child(4) {
+    background-color: rgb(1, 83, 0);
+}
+#actions div:nth-child(5) {
+    background-color: rgb(26, 120, 0);
+}
+
+
 
 
 
